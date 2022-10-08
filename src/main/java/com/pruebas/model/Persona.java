@@ -4,7 +4,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Persona {
 	@Id
 	private Integer id;
@@ -12,23 +22,5 @@ public class Persona {
 	private String name;
 	@Column
 	private Integer edad;
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Integer getEdad() {
-		return edad;
-	}
-	public void setEdad(Integer edad) {
-		this.edad = edad;
-	}
 	
 }
